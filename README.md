@@ -3,4 +3,5 @@
 台灣蝦皮拍賣-每日簽到蝦幣獎勵 #Python #Playwright
 
 pip install playwright
+
 python -m playwright install
