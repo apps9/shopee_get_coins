@@ -5,7 +5,7 @@ import os
 #登入網頁
 def shopee_login(page,id,pwd): 
     try:   
-        page.goto("https://shopee.tw/buyer/login",timeout=None) 
+        page.goto("https://shopee.tw/buyer/login",timeout=5000) 
         page.locator("input[name='loginKey']").fill(id)
         page.locator("input[name='password']").fill(pwd)
         page.locator("input[name='password']").press("Enter")   
@@ -16,11 +16,11 @@ def shopee_login(page,id,pwd):
         return False
 #登出網頁
 def shoppe_logout(page):
-    page.goto("https://shopee.tw/buyer/logout",timeout=None) 
+    page.goto("https://shopee.tw/buyer/logout",timeout=5000) 
 
 #每日簽到獲得金幣網頁
 def shopee_get_coins(page):
-    page.goto("https://shopee.tw/shopee-coins",timeout=None)
+    page.goto("https://shopee.tw/shopee-coins",timeout=5000)
     time.sleep(2)
     name = page.locator(".navbar__username").nth(0).inner_text()
     status =  page.locator(".pcmall-dailycheckin_3uUmyu").nth(0)    #點擊獲得蝦幣
